@@ -1,0 +1,6 @@
+Vladimir, Bazhanov, +79375295624, Pushkina 46, http://flatstack.com
+Ivan, Ivanov, +7 977 77 77 777, Unknown street 46, http://google.com
+Petr, Sergeev, , Pobedy 105, http://yandex.ru
+Rinat, Akhmethanov, +79656235531, Kalinina 60, https://vk.com/koala1101
+Bulat, Fakhrutdion, +79971213783, Universiade Village 18, https://vk.com/korjick
+Alina, Fedorova, +79172435577, Kremlevskaya 35, https://vk.com/ggWork
