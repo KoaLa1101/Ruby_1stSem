@@ -31,11 +31,11 @@ end
 
 post '/todos' do
 	if params['custom_method'] == 'DELETE'
-		@result = ToDo.where(params).first.delete
+		@result = Db.where(params).first.delete
 
 		redirect to('/todos')
 	else
-		@result = ToDo.new(params).save
+		@result = Db.new(params).save
 
 		redirect to("/todos/#{@result.first['id']}")
 	end
@@ -43,7 +43,7 @@ end
 
 post 'todos/:id' do
 	if params['custom_method'] == 'PUT'
-		@result = ToDo.where(params).first.update(params)
+		@result = Db.where(params).first.update(params)
 
 		redirect to("/todos/#{params['id']}")
 	end
