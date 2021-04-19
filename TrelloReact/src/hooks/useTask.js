@@ -1,5 +1,5 @@
 import {useQuery} from "@apollo/client";
-import getTasks from "../graphql/getTasks";
+import getTasks from "../graphql/qeueries/getTasks";
 
 const useTask = () => {
     const {data, loading, error} = useQuery(getTasks);

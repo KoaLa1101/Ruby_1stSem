@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button(
     ({ disabled }) => `
-    color: black;
     cursor: ${disabled ? 'default' : 'pointer'};
     opacity: ${disabled ? '0.5': '1'};
     font-size: 20px;
@@ -11,9 +10,18 @@ const StyledButton = styled.button(
     border: none;
     padding: 4px 8px;
     margin: 0px 10px;
-    &:hover {
-        border: none;
-        background-color: white;
+    
+     :disabled {
+      border: 1px solid gray;
+      background-color: grey;
+      color: white;
+      cursor: auto;
+    }
+    :focus {
+      outline: #61dafb 1px solid;
+    }
+    :active {
+      outline: #61dafb 1px solid;
     }
 `);
 

@@ -21,32 +21,32 @@ function App() {
     }
 
     return (
-        <ApolloProvider client={apolloClient}>
-            <BrowserRouter>
-                <Switch>
-                    <Route exact path={HOME}>
-                        <HomePage/>
-                    </Route>
-                    <Route exact path={TASKS}>
-                        <Application/>
-                    </Route>
-                    <Route path={TASK}>
-                        <TaskPage/>
-                    </Route>
-                    <Route path={'tasks-with-graphql'}>
-                        <TasksWithGraphql/>
-                    </Route>
-                </Switch>
-                <div className="App">
-                    <header className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
-                    </header>
-                </div>
+        <div className="App">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo"/>
+                <ApolloProvider client={apolloClient}>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route exact path={HOME}>
+                                <HomePage/>
+                            </Route>
+                            <Route exact path={TASKS}>
+                                <Application/>
+                            </Route>
+                            <Route path={TASK}>
+                                <TaskPage/>
+                            </Route>
+                            <Route path={'tasks-with-graphql'}>
+                                <TasksWithGraphql/>
+                            </Route>
+                        </Switch>
+                    </BrowserRouter>
+                </ApolloProvider>
+            </header>
+        </div>
 
-            </BrowserRouter>
-        </ApolloProvider>
-
-    );
+    )
+        ;
 }
 
 export default App;

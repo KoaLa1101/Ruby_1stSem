@@ -38,12 +38,22 @@ const ToDoPage = (props) => {
         setList(list.filter((elem, index) => i !== index));
     }
 
+    const handleCheck = (ev, i) => {
+        const {
+            target: { checked },
+        } = ev;
+        setList((currentList) => currentList.map((listItem, index) => (i === index ? { ...listItem, checked } : listItem)));
+    };
+
+
     return (
         <>
-            <ToDoList list={list} onRemove={remove} hasChanged={hasChanged}/>
+            <ToDoList list={list} remove={remove} hasChanged={hasChanged} checked={handleCheck}/>
             <ToDoForm onSubmit={onAddNewListItem}/>
-            <Button onClick={resetList} class={"btn btn-outline-danger my-lg-3"}>Reset</Button>
-            <Button onClick={saveList} class={"btn btn-outline-success my-lg-3"}>Save</Button>
+            <div class={"d-flex align-items-center"}>
+                <a onClick={saveList} class={"btn btn-outline-success my-lg-3 m-lg-3"}>Save</a>
+                <a onClick={resetList} class={"btn btn-outline-danger my-lg-3 m-lg-3"}>Reset</a>
+            </div>
         </>
     );
 };

@@ -1,6 +1,6 @@
 import Button from "../../atoms/Button";
 import Input from "../../atoms/Input";
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 const defaultValue = "";
 const ToDoForm = ({disabled, onSubmit}) => {
@@ -14,11 +14,12 @@ const ToDoForm = ({disabled, onSubmit}) => {
 
     return (
         <>
-            <Input onChange={setValue} value={value} />
-            <Button onClick={handleSubmit} class={"btn btn-outline-success btn-success"}>Add!</Button>
-            <br />
-            {/* <Input disabled />
-      <Button disabled >Disabled</Button> */}
+            <div class={"d-flex align-items-center"}>
+                <Input disable={disabled} onChange={setValue} value={value} class={"form-control"} placeholder={"Input task"}/>
+                <Button primary disabled={disabled || !value} onClick={handleSubmit}
+                        class={"btn btn-outline-success btn-success"}>Add!</Button>
+                <br/>
+            </div>
         </>
     );
 }

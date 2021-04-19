@@ -18,12 +18,12 @@ const TaskPage = () => {
 
     return (
         <>
-            <div>
-                {lists.text}
+            <div class={"text-center"}>
+                <p> {lists.text} </p>
             </div>
-            <Button onClick={goToPreviousPage} class={"btn btn-outline-dark my-lg-3"}>
+            <a onClick={goToPreviousPage} class={"btn btn-outline-light my-lg-3"}>
                 Go back
-            </Button>
+            </a>
         </>
     )
 }
