@@ -38,17 +38,17 @@ const ToDoPage = (props) => {
         setList(list.filter((elem, index) => i !== index));
     }
 
-    const handleCheck = (ev, i) => {
-        const {
-            target: { checked },
-        } = ev;
-        setList((currentList) => currentList.map((listItem, index) => (i === index ? { ...listItem, checked } : listItem)));
+    const handleCheck = (id) => {
+        setList((currentList) => currentList.map((listItem) => (id === listItem.id ? {
+            ...listItem,
+            checked: !listItem.checked
+        } : listItem)));
     };
 
 
     return (
         <>
-            <ToDoList list={list} remove={remove} hasChanged={hasChanged}/>
+            <ToDoList list={list} remove={remove} hasChanged={hasChanged} onCheck={handleCheck}/>
             <ToDoForm onSubmit={onAddNewListItem}/>
             <div class={"d-flex align-items-center"}>
                 <a onClick={saveList} class={"btn btn-outline-success my-lg-3 m-lg-3"}>Save</a>

@@ -1,15 +1,14 @@
 import {Link} from 'react-router-dom'
 import styled from 'styled-components';
 
-
 const StyledToDoListItem = styled.li(
-    ({ checked }) => `
+    ({checked}) => `
   min-width: 300px;
   display: flex;
   align-items: center;
   margin-bottom: 8px;
   
-  span {
+  a {
     text-decoration: ${checked ? 'line-through' : 'none'};
     color: ${checked ? 'grey' : 'inherit'};
   }
@@ -20,11 +19,11 @@ const ToDoListItem = (props) => {
     const {children, id, checked} = props;
     return (
         <div>
-            <Link to={`/tasks/${id}`}>
-                <StyledToDoListItem checked={checked}>
+            <StyledToDoListItem checked={checked}>
+                <Link to={`/tasks/${id}`}>
                     {children}
-                </StyledToDoListItem>
-            </Link>
+                </Link>
+            </StyledToDoListItem>
         </div>
 
     )

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CheckBox from "../../atoms/Checkbox";
 
 const ToDoList = (props) => {
-    const {list, remove, hasChanged} = props;
+    const {list, remove, hasChanged, onCheck} = props;
     return (
         <>
             <Header hasChanged={hasChanged}>List of ToDos</Header>
@@ -13,7 +13,7 @@ const ToDoList = (props) => {
                     {list.map((listItem, i) => (
                         <>
                             <div class={"d-flex my-lg-3 m-lg-3"}>
-                                <CheckBox/>
+                                <CheckBox changeText={() => onCheck(listItem.id)}/>
                                 <ToDoListItem id={listItem.id} checked={listItem.checked}>
                                     {listItem.text}
                                 </ToDoListItem>
