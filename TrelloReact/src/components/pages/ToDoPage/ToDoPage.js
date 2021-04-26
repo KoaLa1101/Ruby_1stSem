@@ -48,7 +48,7 @@ const ToDoPage = (props) => {
 
     return (
         <>
-            <ToDoList list={list} remove={remove} hasChanged={hasChanged} checked={handleCheck}/>
+            <ToDoList list={list} remove={remove} hasChanged={hasChanged}/>
             <ToDoForm onSubmit={onAddNewListItem}/>
             <div class={"d-flex align-items-center"}>
                 <a onClick={saveList} class={"btn btn-outline-success my-lg-3 m-lg-3"}>Save</a>

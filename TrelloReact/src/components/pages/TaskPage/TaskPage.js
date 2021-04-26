@@ -1,9 +1,7 @@
 /* eslint-disable */
 
-import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useHistory, useParams} from "react-router";
-import Button from '../../atoms/Button';
 import list from "../../../resoucers/list";
 
 
@@ -18,12 +16,12 @@ const TaskPage = () => {
 
     return (
         <>
-            <div class={"text-center"}>
+            <div class={"d-flex flex-column text-center"}>
                 <p> {lists.text} </p>
+                <a onClick={goToPreviousPage} class={"btn btn-outline-light my-lg-3"}>
+                    Go back
+                </a>
             </div>
-            <a onClick={goToPreviousPage} class={"btn btn-outline-light my-lg-3"}>
-                Go back
-            </a>
         </>
     )
 }
