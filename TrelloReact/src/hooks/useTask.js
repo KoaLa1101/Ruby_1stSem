@@ -1,14 +1,17 @@
-import {useQuery} from "@apollo/client";
-import getTasks from "../graphql/qeueries/getTasks";
+import {useQuery} from '@apollo/client';
+import getTasks from '../graphql/queries/getTasks';
 
-const useTask = () => {
+
+const useTasks = () => {
     const {data, loading, error} = useQuery(getTasks);
 
+    console.log(data);
+
     return {
-        tasks: data?.tasks || [],
+        tasks: data?.cards || [],
         loading,
         error
-    };
-};
+    }
+}
 
-export default useTask;
+export default useTasks;

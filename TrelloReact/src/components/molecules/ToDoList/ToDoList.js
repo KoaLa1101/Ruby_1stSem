@@ -15,9 +15,9 @@ const ToDoList = (props) => {
                             <div class={"d-flex my-lg-3 m-lg-3"}>
                                 <CheckBox changeText={() => onCheck(listItem.id)}/>
                                 <ToDoListItem id={listItem.id} checked={listItem.checked}>
-                                    {listItem.text}
+                                    {listItem.title}
                                 </ToDoListItem>
-                                <a onClick={() => remove(i)} class={"btn btn-outline-danger my-lg-3 m-lg-3"}>
+                                <a onClick={() => remove(listItem.id)} class={"btn btn-outline-danger my-lg-3 m-lg-3"}>
                                     remove
                                 </a>
                             </div>

@@ -17,7 +17,9 @@ const TaskPage = () => {
     return (
         <>
             <div class={"d-flex flex-column text-center"}>
-                <p> {lists.text} </p>
+                <div>
+                    <p> {lists.title} </p>
+                </div>
                 <a onClick={goToPreviousPage} class={"btn btn-outline-light my-lg-3"}>
                     Go back
                 </a>

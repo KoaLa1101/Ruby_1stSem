@@ -14,7 +14,7 @@ import routes from './config/todo';
 
 
 function App() {
-    const {HOME, TASKS, TASK} = routes;
+    const {HOME, TASKS, TASK, GR_TASKS} = routes;
 
     const Application = () => {
         return (<ToDoPage/>)
@@ -36,7 +36,7 @@ function App() {
                             <Route path={TASK}>
                                 <TaskPage/>
                             </Route>
-                            <Route path={'tasks-with-graphql'}>
+                            <Route exact path={GR_TASKS}>
                                 <TasksWithGraphql/>
                             </Route>
                         </Switch>
