@@ -1,1 +1,1 @@
-# Ruby_1stSem
+# Ruby_Lab
