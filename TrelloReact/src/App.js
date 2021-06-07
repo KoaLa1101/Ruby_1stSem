@@ -11,10 +11,11 @@ import TasksWithGraphql from "./components/pages/TasksWithGraphql";
 import {ApolloProvider} from "@apollo/client";
 import apolloClient from "./lib/apolloClient";
 import routes from './config/todo';
+import TaskPageGq from "./components/pages/TaskPageGq";
 
 
 function App() {
-    const {HOME, TASKS, TASK, GR_TASKS} = routes;
+    const {HOME, TASKS, TASK, GR_TASKS, TASK_GQ} = routes;
 
     const Application = () => {
         return (<ToDoPage/>)
@@ -38,6 +39,9 @@ function App() {
                             </Route>
                             <Route exact path={GR_TASKS}>
                                 <TasksWithGraphql/>
+                            </Route>
+                            <Route exact path={TASK_GQ}>
+                                <TaskPageGq/>
                             </Route>
                         </Switch>
                     </BrowserRouter>

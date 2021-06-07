@@ -10225,9 +10225,9 @@ Lockfile:
     dependencies:
       randombytes "^2.1.0"
   
-  serve-index@^1.9.1:
+  serve-index.js@^1.9.1:
     version "1.9.1"
-    resolved "https://registry.yarnpkg.com/serve-index/-/serve-index-1.9.1.tgz#d3768d69b1e7d82e5ce050fff5b453bea12a9239"
+    resolved "https://registry.yarnpkg.com/serve-index.js/-/serve-index.js-1.9.1.tgz#d3768d69b1e7d82e5ce050fff5b453bea12a9239"
     integrity sha1-03aNabHn2C5c4FD/9bRTvqEqkjk=
     dependencies:
       accepts "~1.3.4"
@@ -11576,7 +11576,7 @@ Lockfile:
       schema-utils "^1.0.0"
       selfsigned "^1.10.8"
       semver "^6.3.0"
-      serve-index "^1.9.1"
+      serve-index.js "^1.9.1"
       sockjs "^0.3.21"
       sockjs-client "^1.5.0"
       spdy "^4.0.2"

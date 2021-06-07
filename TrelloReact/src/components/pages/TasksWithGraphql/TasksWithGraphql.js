@@ -1,9 +1,9 @@
 import useTask from "../../../hooks/useTask";
 import React, { useEffect, useState } from 'react';
-import ToDoList from '../../molecules/ToDoList'
 import ToDoForm from "../../molecules/ToDoForm";
 import useCreateTask from "../../../hooks/useCreateTask";
 import useRemoveTask from "../../../hooks/useRemoveTask";
+import ToDoListGq from "../../molecules/ToDoListGq/ToDoListGq";
 
 
 const TasksWithGraphql = () => {
@@ -13,7 +13,7 @@ const TasksWithGraphql = () => {
     return (
         <>
             <ToDoForm onSubmit={createTask}/>
-            <ToDoList list={tasks} remove={removeTask} />
+            <ToDoListGq list={tasks} remove={removeTask} />
         </>
     );
 };
