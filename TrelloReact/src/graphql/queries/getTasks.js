@@ -1,10 +1,16 @@
 import {gql} from '@apollo/client';
 
 export default gql`
-  query getTasks {
+query getTasks {
     cards {
       id,
-      title
+      title,
+      todos {
+            id,
+            title,
+            description,
+            cardId
+      }
     }
   }
 `;
